@@ -1,5 +1,5 @@
 # 1secmail
- 1secmail.com api lib for Python 3.6 and high
+1secmail.com api lib for Python 3.6 and high
  
 For use:
 
@@ -8,8 +8,7 @@ Download file and do import:
 import onesec_api
 ```
 Use example:
-```
-!python
+```python
 
 import onesec_api
 import json
