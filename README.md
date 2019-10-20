@@ -39,7 +39,7 @@ print ('Your restore link:', rl)
 
 Mail filter:
 
-onesec_api.filtred_mail (domain(or part of), subject(or part), id(only int), date(in YYYY-MM-DD format)
+onesec_api.filtred_mail (domain(or part of), subject(or part), id(only int), date(in YYYY-MM-DD format))
 
 onesec_api.get_link (domain(or part of), subject(or part), x-path, clear_box(default: True))
 
