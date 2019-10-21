@@ -4,10 +4,10 @@
 For use:
 
 Download file and do import:
+```python
+from onesec_api import Mailbox
 ```
-import onesec_api
-```
-Use example:
+*Use example*
 ```python
 
 from onesec_api import Mailbox
@@ -36,11 +36,11 @@ print ('Your restore link:', rl)
 ```
 # Params
 
-Mail filter:
+*Mail filter:*
 
 onesec_api.filtred_mail (domain(or part of), subject(or part), id(only int), date(in YYYY-MM-DD format))
 
-Get link from mail body:
+*Get link from mail body:*
 
 onesec_api.get_link (domain(or part of), subject(or part), x-path, clear_box(default: True))
 
