@@ -13,24 +13,25 @@ from onesec_api import Mailbox
 from onesec_api import Mailbox
 import json
 
-print('# Example for use random email box')
-mb = Mailbox()
-print('\n# Example for use user sets email')
-mb = Mailbox('my.favorite.mail')
+# for use random email box
+ma = Mailbox('')
+# for user sets email
+ma = Mailbox('my.favorite.mail')
 # get id for all mail in box
-all_id = mb.filtred_mail()
-print('all mail id: ', all_id)
+mb = ma.filtred_mail()
+print('all mail id: ', mb)
 
 # print all field and body-only for first message in list:
-if isinstance(all_id, list): 
-    print('first message id:', all_id[0])
-    first_mail = mb.mailjobs('read',all_id[0])
-    print('first mail body: ',first_mail.json()['body'])
+if isinstance(mb, list):
+    
+    print(mb[0]) # all field
+    mf = ma.mailjobs('read',mb[0])
+    print('first mail body: ',mf.json()['body']) # only body
 else:
-    print('first mail not found')
+    mf = 'not found'
    
-print ("\n# Find email from gmail.com \n# If email from gmail.com contains 'Restore password' subject -\n# return restore link and clear mailbox")
-rl = mb.get_link('gmail.com', 'Restore password')
+print ("if email from gmail.com contain 'Restore password' subject - return restore link and clear mailbox")
+rl = ma.get_link('gmail.com', 'Restore password')
 print ('Your restore link:', rl)
 ```
 # Params

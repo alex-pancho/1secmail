@@ -13,7 +13,7 @@ class Mailbox:
     'del' - clear mailbox, all messages be removed!
     """
     
-    def __init__(self,mail_name=''):
+    def __init__(self,mail_name):
         """Constructor"""
         self.API = 'https://www.1secmail.com/api/v1/'
         self.s = requests.Session()
